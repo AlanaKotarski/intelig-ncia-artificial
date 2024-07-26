@@ -23,3 +23,15 @@ const perguntas = [
 
     }
 ]
+
+
+function mostraPergunta(){
+    if (atual >= perguntas.lenght) {
+        mostraResultado();
+        return; 
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
